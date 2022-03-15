@@ -6,7 +6,7 @@ def validation(email,passwd):
     pat = re.compile(reg)
     mat = re.search(pat, passwd)
     if(re.fullmatch(regex, email) and mat):
-        file = open('/content/sample_data/project ','a')
+        file = open('project_','a')
         file.writelines(["\n"+x])
         file.close()
         print("valid email-id and password")
@@ -31,7 +31,7 @@ elif process == 1:
     print("please enter your email id and password")
     Email=input("enter your email id -> ")
     Password=input("enter your pasword -> ")
-    file = open('/content/sample_data/project ','r')
+    file = open('project_','r')
     for i in file:
         if i in Email+Password :
             print("sucessfully logined")
@@ -39,7 +39,7 @@ elif process == 1:
 elif process == 2:
     print("forgot password")
     Email=input("enter your email id -> ")
-    file = open('/content/sample_data/project ','r')
+    file = open('project_','r')
     for i in file:
         if Email in i:
             c=len(Email)
